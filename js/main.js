@@ -2,8 +2,15 @@ console.log("main.js loaded");
 
 
 var words = ['flower', 'beach', 'planet', 'city', 'starfish', 'sleep', 'traffic', 'candle', 'water', 'random', 'yacht'];
+var parts;
 
 var randomWord;
+var choosenLetters;
+var hangingParts;
+
+var $playerWord = $("#playerWord");
+var $choosenLetters = $("#choosenLetters");
+
 
 function chooseWord() {
 	randomWord = words[Math.floor(Math.random() * words.length)];
@@ -13,136 +20,183 @@ function chooseWord() {
 function blanksFromAnswer() {
 	var result = ""; 
 		for(var i = 0; i < randomWord.length; i++) {
-		$('#playerWord').append("_ ");
-		//result += "_ " ;
+		$('#playerWord').append($("div").html("_ ").addClass("letterSpaces"));
+		
+		}
+}
+
+function render(){
+
+	// render the word
+	var displayWord = "";
+	for (var i = 0; i < randomWord.length; i++) {
+		if ( choosenLetters.indexOf(randomWord[i]) === -1) {
+			displayWord += "_";
+		} else {
+			displayWord += randomWord[i];
+		}
 	}
+	$playerWord.html(displayWord);
+
+	// render choosen letters
+	$choosenLetters.html(choosenLetters);
+
+
+	// render hangings
+	console.log(hangingParts);	
+
+
+
+	// render remaining blanks
+
+	// render score?, tries?
+
+	
 }
 
 
 var start = function() {
 	chooseWord();
-	blanksFromAnswer();
+	choosenLetters = "";
+	loosingCount = 0;
+	hangingParts = [];
+	parts = ['head', 'torso', 'left arm', 'right arm', 'left leg', 'right leg'];
 	$('#start').hide("slow");
 	$('body').removeClass("bimage").addClass("bimage2");
 };
 
- $('#start').click(start); 
+$('#start').click(start); 
 
- var keyUp = function () {
- 	$(document).keyup(function (key){
- 		switch(key.which){
- 			case 65:
- 				console.log("a");
- 			break;
+var fillInTheBlank = function(letter, index){
+	$('#playerWord:nth-child(' + index + ")").html(letter);
+}
 
- 			case 66:
- 				console.log("b");
- 			break;
+// var checkForLetter = function(letter){
+// 	for (var i = 0; i < randomWord.length; i++) {
+// 		if (randomWord.charAt(i) === letter){
+// 			fillInTheBlank(letter, i);
+// 		}
+// 	}
+// }
 
- 			case 67:
- 				console.log("c");
- 			break;
-
- 			case 68:
- 				console.log("d");
- 			break;
-
- 			case 69:
- 				console.log("e");
- 			break;
-
- 			case 70:
- 				console.log("f");
- 			break;
-
- 			case 71:
- 				console.log("g");
- 			break;
-
- 			case 72:
- 				console.log("h");
- 			break;
-
- 			case 73:
- 				console.log("i");
- 			break;
-
- 			case 74:
- 				console.log("j");
- 			break;
-
- 			case 75:
- 				console.log("k");
- 			break;
-
- 			case 76:
- 				console.log("l");
- 			break;
-
- 			case 77:
- 				console.log("m");
- 			break;
-
- 			case 78:
- 				console.log("n");
- 			break;
-
- 			case 79:
- 				console.log("o");
- 			break;
-
- 			case 80:
- 				console.log("p");
- 			break;
-
- 			case 81:
- 				console.log("q");
- 			break;
-
- 			case 82:
- 				console.log("r");
- 			break;
-
- 			case 83:
- 				console.log("s");
- 			break;
-
- 			case 84:
- 				console.log("t");
- 			break;
-
- 			case 85:
- 				console.log("u");
- 			break;
-
- 			case 86:
- 				console.log("v");
- 			break;
-
- 			case 87:
- 				console.log("w");
- 			break;
-
- 			case 88:
- 				console.log("x");
- 			break;
-
- 			case 89:
- 				console.log("y");
- 			break;
-
- 			case 90:
- 				console.log("z");
- 			break;
-
- 		
+function letterPressed(letter){
+	if (choosenLetters.indexOf(letter) === -1) {
+		choosenLetters += letter;
+		if (randomWord.indexOf(letter) === -1) {
+			hangingParts.push(parts.shift());
+		}
+	}
+	render();
+}
 
 
+$(document).keyup(function (key){
+	switch(key.which){
+		case 65:
+			letterPressed("a");
+		break;
 
+		case 66:
+			letterPressed("b");
+		break;
 
- 		}
- 	}
- }
+		case 67:
+			letterPressed("c");
+		break;
+
+		case 68:
+			letterPressed("d");
+		break;
+
+		case 69:
+			letterPressed("e");
+		break;
+
+		case 70:
+			letterPressed("f");
+		break;
+
+		case 71:
+			letterPressed("g");
+		break;
+
+		case 72:
+			letterPressed("h");
+		break;
+
+		case 73:
+			letterPressed("i");
+		break;
+
+		case 74:
+			letterPressed("j");
+		break;
+
+		case 75:
+			letterPressed("k");
+		break;
+
+		case 76:
+			letterPressed("l");
+		break;
+
+		case 77:
+			letterPressed("m");
+		break;
+
+		case 78:
+			letterPressed("n");
+		break;
+
+		case 79:
+			letterPressed("o");
+		break;
+
+		case 80:
+			letterPressed("p");
+		break;
+
+		case 81:
+			letterPressed("q");
+		break;
+
+		case 82:
+			letterPressed("r");
+		break;
+
+		case 83:
+			letterPressed("s");
+		break;
+
+		case 84:
+			letterPressed("t");
+		break;
+
+		case 85:
+			letterPressed("u");
+		break;
+
+		case 86:
+			letterPressed("v");
+		break;
+
+		case 87:
+			letterPressed("w");
+		break;
+
+		case 88:
+			letterPressed("x");
+		break;
+
+		case 89:
+			letterPressed("y");
+		break;
+
+		case 90:
+			letterPressed("z");
+		break;
+	}
+});
 
 
 

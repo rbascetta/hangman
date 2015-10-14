@@ -19,11 +19,15 @@ body {
 	margin: 0 auto;
 	font-weight: bold;
 	font-size: 50px;
+	letter-spacing: 20px;
 }
 
-.center{
-	text-align: center;
+#choosenLetters{
+	font-weight: bold;
+	font-size: 30px;
+	letter-spacing: 10px;	
 }
+
 
 h1 {
 	font-size: 75px;
@@ -56,6 +60,27 @@ button:hover {
   background: #3cfc3c;
   text-decoration: none;
 }
+
+  .inputArea {
+    font-family: monospace;
+    text-align: left;
 }
 
-ß
+#letterInput {
+    border:1px #6f5a2d solid;
+    width:20pt;
+    font-size:14pt;
+    text-align:center;
+    font-family: monospace;
+    text-align: center;
+}
+
+#guessLetter{
+	font-family: ;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.letterSpaces {
+	display: inline-block;
+}
