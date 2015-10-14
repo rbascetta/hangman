@@ -28,6 +28,122 @@ var start = function() {
 
  $('#start').click(start); 
 
+ var keyUp = function () {
+ 	$(document).keyup(function (key){
+ 		switch(key.which){
+ 			case 65:
+ 				console.log("a");
+ 			break;
+
+ 			case 66:
+ 				console.log("b");
+ 			break;
+
+ 			case 67:
+ 				console.log("c");
+ 			break;
+
+ 			case 68:
+ 				console.log("d");
+ 			break;
+
+ 			case 69:
+ 				console.log("e");
+ 			break;
+
+ 			case 70:
+ 				console.log("f");
+ 			break;
+
+ 			case 71:
+ 				console.log("g");
+ 			break;
+
+ 			case 72:
+ 				console.log("h");
+ 			break;
+
+ 			case 73:
+ 				console.log("i");
+ 			break;
+
+ 			case 74:
+ 				console.log("j");
+ 			break;
+
+ 			case 75:
+ 				console.log("k");
+ 			break;
+
+ 			case 76:
+ 				console.log("l");
+ 			break;
+
+ 			case 77:
+ 				console.log("m");
+ 			break;
+
+ 			case 78:
+ 				console.log("n");
+ 			break;
+
+ 			case 79:
+ 				console.log("o");
+ 			break;
+
+ 			case 80:
+ 				console.log("p");
+ 			break;
+
+ 			case 81:
+ 				console.log("q");
+ 			break;
+
+ 			case 82:
+ 				console.log("r");
+ 			break;
+
+ 			case 83:
+ 				console.log("s");
+ 			break;
+
+ 			case 84:
+ 				console.log("t");
+ 			break;
+
+ 			case 85:
+ 				console.log("u");
+ 			break;
+
+ 			case 86:
+ 				console.log("v");
+ 			break;
+
+ 			case 87:
+ 				console.log("w");
+ 			break;
+
+ 			case 88:
+ 				console.log("x");
+ 			break;
+
+ 			case 89:
+ 				console.log("y");
+ 			break;
+
+ 			case 90:
+ 				console.log("z");
+ 			break;
+
+ 		
+
+
+
+
+ 		}
+ 	}
+ }
+
 
 
 
