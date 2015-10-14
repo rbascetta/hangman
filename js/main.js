@@ -3,27 +3,36 @@ console.log("main.js loaded");
 
 var words = ['flower', 'beach', 'planet', 'city', 'starfish', 'sleep', 'traffic', 'candle', 'water', 'random', 'yacht'];
 
-var chooseWord = words[Math.floor(Math.random() * words.length)];
+var randomWord;
 
-console.log(chooseWord);
-
-document.getElementById("chooseWord").textContent = chooseWord;
-
-
-
-function blanksFromAnswer(answerWord) {
-
-	var result = ""; 
-	for(i = 0; i < answerWord.length; i++) {
-		result += "_" ;
-	}
-
+function chooseWord() {
+	randomWord = words[Math.floor(Math.random() * words.length)];
 }
+
+
+function blanksFromAnswer() {
+	var result = ""; 
+		for(var i = 0; i < randomWord.length; i++) {
+		$('#playerWord').append("_ ");
+		//result += "_ " ;
+	}
+}
+
+
+var start = function() {
+	chooseWord();
+	blanksFromAnswer();
+	$('#start').hide("slow");
+	$('body').removeClass("bimage").addClass("bimage2");
+};
+
+ $('#start').click(start); 
+
+
 
 
 /* add click listener in jquery, once it hears the click begin the game/get random word (test with console.log fuck yeah)
 
-/*
 1. intro page with a play button 
 -play button written in JS which doesn't bring you to a new page but rather hides elements and brings out new ones to the official game board.
 
@@ -55,4 +64,8 @@ function blanksFromAnswer(answerWord) {
 10.
 -play again button starts game over and chooses another random word
 
-/*
+*/
+
+
+
+
