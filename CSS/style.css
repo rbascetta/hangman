@@ -1,17 +1,17 @@
 body {
-	background-color: #4AFFCE;
+	background-color: #43EDFF;
 	background-repeat: no-repeat;
-	background-size: 400px;
-	background-position: 450px 200px;
+	background-size: 200px;
+	background-position: 550px 150px;
 }
 
 .bimage {
-	background-image: url(../assets/hangman.png);
+	background-image: url();
+	background-repeat: no-repeat;
+	background-size: 1000px;
+	background-position:
 }
 
-.bimage2 {
-	background-image: url(http://www.quia.com/img/hm_1_1.gif);
-}
 
 #playerWord {
 	display: inline-block;
@@ -20,12 +20,14 @@ body {
 	font-weight: bold;
 	font-size: 50px;
 	letter-spacing: 20px;
+	margin-left: 99px;
 }
 
 #choosenLetters{
 	font-weight: bold;
 	font-size: 30px;
-	letter-spacing: 10px;	
+	letter-spacing: 10px;
+	margin-left: 136px;	
 }
 
 
@@ -39,25 +41,26 @@ h1 {
 button {
   
   margin: 0 auto;
-  background: #000000;
-  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background: dodgerblue;
+  /*background-image: -webkit-linear-gradient(top, #000000, #000000);
   background-image: -moz-linear-gradient(top, #000000, #000000);
   background-image: -ms-linear-gradient(top, #000000, #000000);
   background-image: -o-linear-gradient(top, #000000, #000000);
-  background-image: linear-gradient(to bottom, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);*/
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border: 0;
   border-radius: 28px;
   font-family: Courier New;
-  color: #ffffff;
+  color: black;
   font-size: 25px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  margin-left: 109px;
 }
 
 button:hover {
-  background: #3cfc3c;
+  background: tomato;
   text-decoration: none;
 }
 
@@ -75,12 +78,63 @@ button:hover {
     text-align: center;
 }
 
-#guessLetter{
+#guessLetter	{
 	font-family: ;
 	font-weight: bold;
 	font-size: 25px;
+	margin-left: 131px;
+}
+
+button {
+
 }
 
 .letterSpaces {
 	display: inline-block;
+}
+
+#boy {
+	position: absolute;
+	right: 150px;
+	top: 200px;
+}
+
+#msg {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	border: solid 5px black;
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px;
+}
+
+.noose, .head, .torso, .pelvis, .arms, .legs, .dead {
+	height: 400px; 
+	width: 150px;
+	background-size: cover;
+	background-image: url("../assets/hangboy.png");
+	background-repeat: no-repeat;
+}
+.noose {
+	background-position: 0 0;
+}
+.head {	
+	background-position: -150px 0;
+}
+.torso {	
+	background-position: -300px 0;
+}
+.pelvis {	
+	background-position: -450px 0;
+}
+.arms {	
+	background-position: -600px 0;
+}
+.legs {	
+	background-position: -750px 0;
+}
+.dead {	
+	background-position: -900px 0;
 }

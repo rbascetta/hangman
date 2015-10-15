@@ -14,9 +14,11 @@
 
  <div id="playerWord"></div>
 
- <div id="guessLetter">Guess a letter</div>
+ <div id="guessLetter" style="display:none">Guess a letter</div>
 
  <div id="choosenLetters"></div>
+
+ <div id="boy" class="noose" style="display:none"></div>
 
 
 <!-- <div class="boxed"> A word will be choosen for you and you must guess what it is by guessing potential letters in that word.
@@ -26,6 +28,10 @@ You cannot guess the same letter twice and if the letter appears in the word twi
 If the hangman is hanged before you can guess the word then you loose, if you can guess the word before the hangman is hanged then you win!</div> // -->
 
 <button id="start">start game</button>
+
+<button id="reset" style="display:none">reset game</button>
+
+<div id="msg" style="display: none">winner!</div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
