@@ -35,8 +35,8 @@ body {
 	font-weight: bold;
 	font-size: 30px;
 	letter-spacing: 10px;
-	margin-left: 136px;
-	color: white;
+	margin-left: 98px;
+	color: tomato;
 	font-family: 'Love Ya Like A Sister', cursive;	
 }
 
@@ -120,7 +120,7 @@ button {
 	transform: translateY(-50%);
 	/*border: solid 5px black;*/
 	width: 300px;
-	margin-left: 393px;
+	margin-left: 308px;
 	margin-top: -296px;
 	text-align: 100px;
 	padding: 20px;

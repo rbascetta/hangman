@@ -55,7 +55,7 @@ function render(){
 
 	} else if (winCheck) {
 		
-		$('#msg').html('winner!').css('display', 'block');
+		$('#msg').html('phew!').css('display', 'block');
 		$('#reset').css('display', 'block');
 
 
