@@ -51,11 +51,13 @@ function render(){
 		
 		$('#msg').html('murderer!').css('display', 'block');
 		$('#reset').css('display', 'block');
+		$("#playerWord").html(randomWord);
 
 	} else if (winCheck) {
 		
 		$('#msg').html('winner!').css('display', 'block');
 		$('#reset').css('display', 'block');
+
 
 	}
 
@@ -205,7 +207,6 @@ $(document).keyup(function (key){
 	}
 });
 
-// 1. show word when loose
-// 2. style
+
 // 3. clean up code
 // 4. fix userstory/icebox
