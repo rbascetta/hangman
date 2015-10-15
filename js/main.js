@@ -49,12 +49,12 @@ function render(){
 	
 	if (loosingCount === 6) {
 		
-		$('#msg').html('HANGED!').css('display', 'block');
+		$('#msg').html('murderer!').css('display', 'block');
 		$('#reset').css('display', 'block');
 
 	} else if (winCheck) {
 		
-		$('#msg').html('WINNER!').css('display', 'block');
+		$('#msg').html('winner!').css('display', 'block');
 		$('#reset').css('display', 'block');
 
 	}
