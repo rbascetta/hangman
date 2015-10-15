@@ -10,9 +10,9 @@ var choosenLetters;
 var loosingCount;
 var winner;
 
-var $playerWord = $("#playerWord");
-var $choosenLetters = $("#choosenLetters");
-var $boy = $("#boy");
+var $playerWord = $('#playerWord');
+var $choosenLetters = $('#choosenLetters');
+var $boy = $('#boy');
 var $refresh = $('#refresh');
 
 //randomizer
@@ -51,7 +51,7 @@ function render(){
 		
 		$('#msg').html('murderer!').css('display', 'block');
 		$('#reset').css('display', 'block');
-		$("#playerWord").html(randomWord);
+		$('#playerWord').html(randomWord);
 
 	} else if (winCheck) {
 		
@@ -73,10 +73,10 @@ var start = function() {
 	choosenLetters = "";
 	loosingCount = 0;
 	winner = false;
-	$('#start').hide("slow");
-	$('body').removeClass("bimage");
-	$('#guessLetter').css("display","block");
-	$('#boy').css("display","block");
+	$('#start').hide('slow');
+	$('body').removeClass('bimage');
+	$('#guessLetter').css('display','block');
+	$('#boy').css('display','block');
 
 };
 
