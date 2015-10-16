@@ -1,5 +1,5 @@
 
-#hangman user story:
+#MVP:
 
 *I want to be able to press **start game** which will bring me to the main screen of the game.
 

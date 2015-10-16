@@ -24,7 +24,7 @@ body {
 	font-family: 'Love Ya Like A Sister', cursive;
 }
 
-#choosenLetters{
+#choosenLetters {
 	font-weight: bold;
 	font-size: 30px;
 	letter-spacing: 10px;
@@ -65,7 +65,7 @@ button:hover {
   text-decoration: none;
 }
 
-  .inputArea {
+.inputArea {
     font-family: 'Love Ya Like A Sister', cursive;
     text-align: left;
 }
@@ -80,7 +80,7 @@ button:hover {
     color: white;
 }
 
-#guessLetter	{
+#guessLetter {
 	font-family: 'Pacifico', cursive;
 	font-weight: bold;
 	font-size: 35px;

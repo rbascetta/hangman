@@ -1,7 +1,7 @@
 //console.log("main.js loaded");
 
 
-var words = ['flower', 'beach', 'planet', 'city', 'starfish', 'sleep', 'traffic', 'candle', 'water', 'random', 'yacht'];
+var words = ['flower', 'beach', 'planet', 'city', 'starfish', 'sleep', 'traffic', 'candle', 'water', 'random', 'yacht', 'bacon', 'brunch', 'party', 'celebrate', 'awkward', 'loser', 'sad', 'chill', 'bro', 'sunshine'];
 
 var	parts = ['noose', 'head', 'torso', 'pelvis', 'arms', 'legs', 'dead'];
 
@@ -22,7 +22,7 @@ function chooseWord() {
 
 
 
-function render(){
+function render() {
 	var winCheck = true;
 
 	// render the word
@@ -207,6 +207,3 @@ $(document).keyup(function (key){
 	}
 });
 
-
-// 3. clean up code
-// 4. fix userstory/icebox
